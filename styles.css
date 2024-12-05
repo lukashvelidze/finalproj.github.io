@@ -1,45 +1,45 @@
 :root {
-    --primary-color: #2a3e52;
-    --secondary-color: #f0f8ff;
-    --background-color: #ffffff;
+    --primary-color: #007acc; /* Soft blue for a coding feel */
+    --secondary-color: #f0f0f0; /* Lighter neutral background */
+    --background-color: #f9f9f9; /* Soft background for readability */
     --text-color: #333333;
-    --dark-background: #1a1a1a;
-    --dark-text: #f0f8ff;
+    --dark-background: #202020;
+    --dark-text: #ffffff;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Courier New', Courier, monospace; /* Simpler, code-friendly font */
     margin: 0;
     padding: 0;
     background-color: var(--background-color);
     color: var(--text-color);
+    line-height: 1.6;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 header {
     background-color: var(--primary-color);
     color: white;
-    padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px; /* Reduced padding for simpler header */
+    border-bottom: 2px solid var(--primary-color); /* Add a clean border */
 }
 
 header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 1000px; /* A bit smaller container for simplicity */
     margin: 0 auto;
-    padding: 0 20px;
 }
 
 .logo {
-    height: 50px;
+    height: 40px; /* Slightly smaller logo */
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 10px;
     margin: 0;
     padding: 0;
 }
@@ -48,19 +48,22 @@ nav ul li a {
     text-decoration: none;
     color: white;
     padding: 5px 10px;
-    transition: background-color 0.3s;
+    border-radius: 3px; /* Rounded corners for simplicity */
+    font-size: 14px; /* Smaller, simpler text */
 }
 
 nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 button#themeToggle {
-    font-size: 18px;
-    border: none;
+    font-size: 16px;
+    border: 1px solid var(--primary-color); /* Basic border for button */
     background: transparent;
     cursor: pointer;
+    padding: 5px 10px; /* Small padding */
+    border-radius: 5px;
+    color: var(--primary-color);
 }
 
 .grid-layout {
@@ -68,45 +71,48 @@ button#themeToggle {
     grid-template-columns: 1fr;
     gap: 20px;
     padding: 20px;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 .hero {
     text-align: center;
-    padding: 50px 20px;
-    background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
+    padding: 30px 20px;
+    background-color: var(--primary-color); /* Solid color instead of gradient */
     color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Slightly rounded corners */
 }
 
 .hero h1 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    font-size: 2.5rem; /* Slightly smaller title */
 }
 
 .hero p {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+    font-size: 1.1rem; /* Smaller text for readability */
 }
 
 .hero .button {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: white;
     background-color: var(--primary-color);
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s;
+    font-size: 16px; /* Standard button size */
 }
 
 .hero .button:hover {
-    background-color: #b16e48;
+    background-color: #005fa3; /* Slightly darker on hover */
 }
 
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     background-color: var(--primary-color);
     color: white;
+    font-size: 14px;
 }
 
 footer a {
@@ -115,7 +121,7 @@ footer a {
 }
 
 footer a:hover {
-    color: var(--secondary-color);
+    color: #ffcc00; /* Lighter color for hover */
 }
 
 body.dark-mode {
@@ -136,42 +142,42 @@ body.dark-mode nav ul li a {
 }
 
 .aircraft-directory {
-    padding: 50px 20px;
+    padding: 40px 20px;
     background-color: var(--secondary-color);
     text-align: center;
 }
 
 .aircraft-directory h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--primary-color);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .aircraft-directory p {
-    font-size: 1.2rem;
-    margin-bottom: 40px;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
     color: var(--text-color);
 }
 
 .aircraft-card {
     background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd; /* Light border for simplicity */
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: left;
-    padding: 20px;
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .aircraft-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.03);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .aircraft-image {
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 8px;
     margin-bottom: 15px;
 }
 
@@ -182,6 +188,5 @@ body.dark-mode nav ul li a {
 
 .aircraft-card p {
     color: var(--text-color);
-    line-height: 1.6;
     font-size: 1rem;
 }
